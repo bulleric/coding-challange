@@ -5,7 +5,7 @@ const UserAvatarButton = () => {
     <button className="flex items-center justify-between p-1.5 rounded-full border border-gray-300 hover:bg-gray-100 w-24">
       <div className="ml-2">
         <Image
-          src="/assets/menu-icon.svg"
+          src="/assets/icons/menu-icon.svg"
           alt="Menu Icon"
           width={20}
           height={20}
@@ -14,7 +14,7 @@ const UserAvatarButton = () => {
       </div>
       <div className="relative flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
         <Image
-          src="/assets/user-avatar.png"
+          src="/assets/images/user-avatar.png"
           alt="User Avatar"
           layout="fill"
           objectFit="cover"

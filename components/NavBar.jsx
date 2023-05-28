@@ -17,10 +17,10 @@ const NavBar = () => {
         <Link href="/">
           <div>
             <div className="hidden md:block">
-              <Image src="/assets/logo-desktop.png" alt="Logo" width={200} height={44} />
+              <Image src="/assets/images/logo-desktop.png" alt="Logo" width={200} height={44} />
             </div>
             <div className="md:hidden">
-              <Image src="/assets/logo-mobile.png" alt="Logo" width={40} height={40} />
+              <Image src="/assets/images/logo-mobile.png" alt="Logo" width={40} height={40} />
             </div>
           </div>
         </Link>
