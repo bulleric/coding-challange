@@ -21,13 +21,16 @@ const GridItem = () => {
           />
         </div>
       </div>
-      <div className="pt-4">
-        <h5 className="text-lg font-semibold text-gray-800">
+      <div className="pl-1 pt-4">
+        <h4 className="text-lg font-semibold text-gray-700">
           Beautiful Apartment
-        </h5>
-        <p className="text-gray-400 text-base">
+        </h4>
+        <p className="text-gray-400 text-base pt-2">
           Spacious apartment in the heart of the city, near famous landmarks.  <br/>
-          3.-8. Sept. Private:r guestkeeper
+          3.-8. Sept
+        </p>
+        <p className="text-gray-400 text-base pt-2">
+          <span className="text-gray-800 font-bold">€ 524</span> Night
         </p>
 
       </div>
