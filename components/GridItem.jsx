@@ -1,30 +1,35 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const GridItem = () => {
   return (
-    <div className="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-md">
-      <div className="relative h-0 pb-full"> {/* This ensures a square aspect ratio */}
+    <div className="max-w-sm mx-auto relative">
+      <div className="relative h-0 pb-[100%] rounded-2xl overflow-hidden">
         <Image
           src="/assets/images/dummy-image.jpg"
           alt="Dummy Image"
           layout="fill"
-          objectFit="cover"
         />
-      </div>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">Beautiful Home</h3>
-        <p className="text-gray-600 text-xs mb-4">Entire apartment · 2 guests · 1 bedroom · 1 bed · 1 bath</p>
-        <div className="flex items-center">
-          <div className="w-8 h-8 rounded-full overflow-hidden mr-2">
-            <Image
-              src="/assets/user-avatar.jpg"
-              alt="Host Avatar"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <p className="text-gray-700 text-sm font-medium">Hosted by John Doe</p>
+        <div
+          className="absolute top-3 right-3 cursor-pointer transition-transform duration-300 transform-gpu hover:scale-110"
+          onClick={() => {}}
+        >
+          <Image
+            src="/assets/icons/heart.svg"
+            alt="Menu Icon"
+            width={24}
+            height={24}
+          />
         </div>
+      </div>
+      <div className="pt-4">
+        <h5 className="text-lg font-semibold text-gray-800">
+          Beautiful Apartment
+        </h5>
+        <p className="text-gray-400 text-base">
+          Spacious apartment in the heart of the city, near famous landmarks.  <br/>
+          3.-8. Sept. Private:r guestkeeper
+        </p>
+
       </div>
     </div>
   );
