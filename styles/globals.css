@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-primary: #FF5A5F; /* Airbnb's primary color */
+    --color-secondary: #008489; /* Airbnb's secondary color */
+    --color-background: #ffffff; /* Background color */
+    --color-text: #484848; /* Text color */
+}
+
+body {
+    @apply text-base bg-white;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: 'Circular Std', sans-serif; /* If 'Circular Std' is not available, you can use a similar sans-serif font */
+}
+
+.main {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Airbnb often uses rounded corners for their buttons and inputs */
+.button, .input {
+    @apply rounded-lg;
+}
+
+/* Airbnb's primary button */
+.button-primary {
+    @apply bg-red-500 text-white;
+    background-color: var(--color-primary);
+}
+
+/* Airbnb's secondary button */
+.button-secondary {
+    @apply bg-teal-500 text-white;
+    background-color: var(--color-secondary);
+}
+
+
+/* smooth transition while loading the page to prevent skipping */
+* {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
