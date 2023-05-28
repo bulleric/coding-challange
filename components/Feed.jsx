@@ -1,3 +1,4 @@
+'use client';
 // Feed component requirements:
 //  This component is responsible for displaying a grid of listings
 //  It will be rendering an array of listing in a card format and holds all 
@@ -10,10 +11,30 @@
 //  - SingleListing
 //      - ImageCarousel?
 
-const Feed = () => {
-  return (
-    <div>Feed</div>
-  )
-}
+import { useState } from 'react';
+import GridItem from './GridItem';
 
-export default Feed
+const Feed = () => {
+  const [listings, setListings] = useState([
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+  ]);
+
+  
+  console.log(listings);
+
+  return (
+    <div>
+      {listings.map((listing, index) => (
+        <div key={index}>
+          <GridItem />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Feed;
