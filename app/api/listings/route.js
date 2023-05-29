@@ -4,7 +4,7 @@ import listingsData from './listings.json';
 
 export const GET = async (req, res) => {
   if (req.method === 'GET') {
-    const listingsPerPage = 10;
+    const listingsPerPage = 20;
     const currentPage = Number(req.query?.page) || 1;
 
     const startIndex = (currentPage - 1) * listingsPerPage;

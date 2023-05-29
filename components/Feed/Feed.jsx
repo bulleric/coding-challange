@@ -13,10 +13,11 @@
 
 import { useEffect, useState } from 'react';
 import GridItem from '@components/Feed/GridItem';
-
+import SkeletonGridItem from '@components/Feed/SkeletonGridItem';
 
 const Feed = () => {
   const [listings, setListings] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     const fetchListings = async () => {
@@ -25,17 +26,28 @@ const Feed = () => {
       setListings(data);
     };
 
-    fetchListings();
+    setTimeout(() => {
+      fetchListings();
+      setLoading(false); 
+    }, 1000); 
   }, []);
 
-  console.log(listings)
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 auto-cols-auto auto-rows-auto gap-4">
-      {listings.map((listing, index) => (
-        <GridItem listing={listing} key={listing.id}/>
-      ))}
+      {loading ? ( // Show loading behavior when data is being fetched
+        Array.from({ length: 10 }, (_, index) => (
+          <div key={index}>
+            <SkeletonGridItem /> {/* Render a skeleton loading item */}
+          </div>
+        ))
+      ) : (
+        listings.map((listing, index) => (
+          <div key={index}>
+            <GridItem listing={listing} /> {/* Render the actual listing item */}
+          </div>
+        ))
+      )}
     </div>
-
   );
 };
 
