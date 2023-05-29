@@ -1,13 +1,14 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
 
-const GridItem = () => {
+const GridItem = ({listing}) => {
+
   return (
     <Link href="/listing">
       <div className="mt-8 relative h-0 pb-[100%] rounded-2xl overflow-hidden">
         <Image
-          src="/assets/images/dummy-image.jpg"
-          alt="Dummy Image"
+          src={listing.mainImage.url}
+          alt="Listing mainImage"
           layout="fill"
         />
         <div
@@ -25,16 +26,16 @@ const GridItem = () => {
         </div>
       </div>
       <div className="pl-1 pt-4">
-        <h4 className="text-lg font-semibold text-gray-700">
-          Beautiful Apartment
+        <h4 className="text-sm font-semibold text-gray-700">
+          {listing.title}
         </h4>
-        <p className="text-gray-400 text-base pt-2">
-          Spacious apartment in the heart of the city, near famous landmarks.
+        <p className="text-gray-400 text-sm pt-2">
+          {`${listing.location.city} / ${listing.location.country.title}` }
           <br />
           3.-8. Sept
         </p>
-        <p className="text-gray-400 text-base pt-2">
-          <span className="text-gray-800 font-bold">€ 524</span> Night
+        <p className="text-gray-400 text-sm pt-2">
+          <span className="text-gray-800 text-sm font-bold">{`${listing.currency.symbol}${listing.price}`}</span> night
         </p>
       </div>
     </Link>
