@@ -11,27 +11,24 @@
 //  - SingleListing
 //      - ImageCarousel?
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import GridItem from '@components/Feed/GridItem';
 
-const Feed = () => {
-  const [listings, setListings] = useState([
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-    { id: 8 },
-    { id: 9 },
-    { id: 10 },
-    { id: 11 },
-    { id: 12 },
-    { id: 13 },
-    { id: 16 },
-  ]);
 
+const Feed = () => {
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    const fetchListings = async () => {
+      const response = await fetch(`/api/listings?page=1`);
+      const data = await response.json();
+      setListings(data);
+    };
+
+    fetchListings();
+  }, []);
+
+  console.log(listings)
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 auto-cols-auto auto-rows-auto gap-4">
       {listings.map((listing, index) => (
