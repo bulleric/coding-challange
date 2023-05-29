@@ -8,8 +8,8 @@
 //  - Search
 import Link from "next/link";
 import Image from "next/image";
-import UserAvatarButton from "./UserAvatarButton";
-import SearchComponent from "./SearchComponent";
+import UserAvatarButton from "@components/Navbar/UserAvatarButton";
+import SearchComponent from "@components/Navbar/SearchComponent";
 
 const NavBar = () => {
   return (

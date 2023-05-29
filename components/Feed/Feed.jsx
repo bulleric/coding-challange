@@ -12,7 +12,7 @@
 //      - ImageCarousel?
 
 import { useState } from 'react';
-import GridItem from './GridItem';
+import GridItem from '@components/Feed/GridItem';
 
 const Feed = () => {
   const [listings, setListings] = useState([

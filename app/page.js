@@ -1,5 +1,5 @@
 // The home component will contain the feed and eventually the CategoryFilter component
-import Feed from '@components/Feed'
+import Feed from '@components/Feed/Feed'
 
 const Home = () => {
   return (
