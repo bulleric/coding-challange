@@ -12,7 +12,7 @@ const UserAvatarButton = () => {
           className="text-gray-500"
         />
       </div>
-      <div className="relative flex-shrink-0 w-8 h-8 rounded-full overflow-hidden">
+      <div className="relative flex-shrink-0 w-9 h-9 rounded-full overflow-hidden">
         <Image
           src="/assets/images/user-avatar.png"
           alt="User Avatar"

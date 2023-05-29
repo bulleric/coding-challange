@@ -9,6 +9,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import UserAvatarButton from "./UserAvatarButton";
+import SearchComponent from "./SearchComponent";
 
 const NavBar = () => {
   return (
@@ -24,6 +25,7 @@ const NavBar = () => {
             </div>
           </div>
         </Link>
+        <SearchComponent />
         <UserAvatarButton />
       </div>
     </nav>
