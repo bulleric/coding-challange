@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const UserAvatarButton = () => {
   return (
-    <button className="flex items-center justify-between p-1.5 rounded-full border border-gray-300 hover:bg-gray-100 w-24">
+    <button className="hidden md:flex items-center justify-between p-1.5 rounded-full border border-gray-300 hover:bg-gray-100 w-24">
       <div className="ml-2">
         <Image
           src="/assets/icons/menu-icon.svg"

@@ -3,7 +3,7 @@ import Feed from '@components/Feed'
 
 const Home = () => {
   return (
-    <section className="mt-20 px-6 sm:px-12">
+    <section className="mt-24 sm:mt-20 px-6 sm:px-12">
       <Feed />
     </section>
   );
