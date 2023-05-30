@@ -49,13 +49,36 @@
 */}
 
 import React from 'react'
-import ImageGrid from '@components/ImageGrid';
+import ImageGrid from '@components/Listing/ImageGrid';
+import InfoRow from '@components/Listing/InfoRow';
+
+const images = [
+  {
+    src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg',
+    alt: 'Two each of gray, white, and black shirts laying flat.',
+  },
+  {
+    src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg',
+    alt: 'Model wearing plain black basic tee.',
+  },
+  {
+    src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg',
+    alt: 'Model wearing plain gray basic tee.',
+  },
+  {
+    src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg',
+    alt: 'Model wearing plain white basic tee.',
+  }
+]
 
 const Listing = () => {
   return (
-    <section className="mt-24 sm:mt-20 px-6 sm:px-12">
-        <h1>Privatzimmer Nr.2, gute Lage, ruhige Gegend, Canggu </h1>
-        <ImageGrid />
+    <section className="mt-24 sm:mt-25 px-6 sm:px-20">
+        <h1 className="font-thin text-3xl text-gray-700 mb-2"> 
+          Stilvolles Terrassenhaus in Surry Hills
+         </h1>
+         <InfoRow/>
+        <ImageGrid images={images}/>
     </section>
 
   )
