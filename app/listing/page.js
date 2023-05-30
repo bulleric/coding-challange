@@ -1,3 +1,4 @@
+"use client";
 // Listing page requriements
 // - Header and title with relevant content (placeholders are fine)
 // - Images and easy way to view them all
@@ -48,14 +49,16 @@
 */}
 
 import React from 'react'
+import ImageGrid from '@components/ImageGrid';
 
 const Listing = () => {
   return (
     <section className="mt-24 sm:mt-20 px-6 sm:px-12">
         <h1>Privatzimmer Nr.2, gute Lage, ruhige Gegend, Canggu </h1>
+        <ImageGrid />
     </section>
 
   )
 }
 
-export default Listing
+export default Listing;
