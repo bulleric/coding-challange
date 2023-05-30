@@ -51,6 +51,8 @@
 import React from 'react'
 import ImageGrid from '@components/Listing/ImageGrid';
 import InfoRow from '@components/Listing/InfoRow';
+import ReserveBoxComponent from '@components/Listing/ReserveBoxComponent';
+import { FaStar } from 'react-icons/fa';
 
 const images = [
   {
@@ -75,13 +77,24 @@ const Listing = () => {
   return (
     <section className="mt-24 sm:mt-25 px-6 sm:px-20">
         <h1 className="font-thin text-3xl text-gray-700 mb-2"> 
-          Stilvolles Terrassenhaus in Surry Hills
-         </h1>
-         <InfoRow/>
+            Stilvolles Terrassenhaus in Surry Hills
+        </h1>
+        <InfoRow/>
         <ImageGrid images={images}/>
+        <div className="mt-8">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-7">
+              <h2 className="text-2xl mb-4">First Section</h2>
+            </div>
+            <div className="col-span-5">
+              <ReserveBoxComponent />
+            </div>
+          </div>
+        </div>
     </section>
 
   )
 }
+
 
 export default Listing;
