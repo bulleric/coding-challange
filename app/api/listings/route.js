@@ -3,7 +3,7 @@ import listingsData from './listings.json';
 // Later implement the query functionallities for search and categorie filters
 
 export const GET = async (req, res) => {
-  if (req.method === 'GET') {
+  try {
     const listingsPerPage = 20;
     const currentPage = Number(req.query?.page) || 1;
 
@@ -21,7 +21,8 @@ export const GET = async (req, res) => {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-  } else {
-    return new Response("Failed to fetch all prompts", { status: 500 })
+  } catch(error){
+    return new Response("Failed to fetch all prompts: ${error}", { status: 500 })
   }
 };
+
